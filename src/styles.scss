@@ -1,0 +1,122 @@
+/* You can add global styles to this file, and also import other style files */
+.header {
+    position: absolute;
+    top: 0;
+    padding-left: 250px;
+    width: 100%;
+    transition: .3s;
+    z-index: 1;
+    background-color: #00bcd4;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
+    &.icon-sidebar{
+        padding-left: 85px;
+    }
+}
+
+.sidebar {
+    display: block;
+    max-width: 250px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: white;
+    box-shadow: 0px 0px 12px -2px black;
+    z-index: 1;
+    transition: .3s;
+
+    &.icon-sidebar{
+        max-width: 85px;
+    }
+
+    .logo {
+        background-color: #00BCD4;
+        position: relative;
+
+        .img {
+            width: calc(100% - 35px);
+        }
+
+        .toogle {
+            float: right;
+            width: 25px;
+            height: 22px;
+            position: relative;
+            z-index: 1;
+            margin-right: 10px;
+            margin-top: 5px;
+            // background-color: #03A9F4;
+            
+            &:hover{
+                cursor: pointer;
+
+                .icon{
+                    &:last-child{
+                        .icon__child{
+                            width: 25px; 
+                            background: white;
+                        }
+                    }
+                }
+            }
+
+            .icon{
+                &__child{
+                    width: 13px;
+                    height: 3px;
+                    background: white;
+                    margin-top: 5px;
+                    transition: .3s;
+
+                    &:nth-child(odd){
+                        transform: rotate(135deg);
+                    }
+
+                    &:nth-child(even){
+                        transform: rotate(232deg);
+                    }
+                }
+
+                &:nth-child(2){
+                    margin-left: -5px;
+                }
+            }
+
+            &.icon-menu{
+                margin-right: 0px;
+                .icon{
+                    &__child{
+                        width: 13px;
+                        height: 3px;
+                        background: white;
+                        margin-top: 5px;
+                        transition: .3s;
+    
+                        &:nth-child(odd){
+                            transform: rotate(230deg);
+                        }
+    
+                        &:nth-child(even){
+                            transform: rotate(310deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.page-content {
+    padding-left: 250px;
+    width: 100%;
+    position: absolute;
+    padding-top: 50px;
+    height: 100%;
+    transition: .3s;
+
+    &.icon-sidebar{
+        padding-left: 85px;
+    }
+}

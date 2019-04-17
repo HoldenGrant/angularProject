@@ -1,0 +1,62 @@
+
+<div class="header" [ngClass]="{'icon-sidebar':ref.toggle}">
+  <app-header></app-header>
+</div> 
+
+
+<div class="sidebar" [ngClass]="{'icon-sidebar':ref.toggle}">
+  <div class="logo p-2">
+    <div class="img d-inline-block">
+      <img src="../assets/imgs/burger.png" alt="">
+    </div>
+    
+    <div class="toogle d-flex" appSidebarMenu #ref="appSidebarMenu">
+      <div class="icon">
+        <div class="icon__child"></div>
+        <div class="icon__child"></div>
+      </div>
+      <div class="icon">
+        <div class="icon__child"></div>
+        <div class="icon__child"></div>
+      </div>
+    </div>
+  </div>
+  <app-nav></app-nav>
+</div>
+
+
+<div class="page-content" [ngClass]="{'icon-sidebar':ref.toggle}">
+<router-outlet>
+    
+      <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    
+    <div [class.active]="classApplied">
+      Here's some text
+      <button (click)="toggleClass()">Toggle Class</button>
+</div>
+
+
+<div class="panel-heading" [class.activeAccArr]="classAppliedArrow" (click)="toggleClassAccArr()">
+  <h4 class="panel-title">
+      <a data-toggle="collapse" href="#collapse1" class="collapsed" aria-expanded="false" >Collapsible panel</a> <i class="material-icons">
+              keyboard_arrow_down
+              </i>
+  </h4>
+</div>
+
+
+<div class="panel-heading" [class.activeAccArr]="classAppliedArrow" (click)="toggleClassAccArr()">
+      <h4 class="panel-title">
+          <a data-toggle="collapse" href="#collapse1" class="collapsed" aria-expanded="false" >Collapsible panel</a> <i class="material-icons">
+                  keyboard_arrow_down
+                  </i>
+      </h4>
+  </div>
+  <div class="my_class" (click)="siderbarEvent()"  
+		[ngClass]="status ? 'success' : 'danger'">                
+		 Some content
+	</div> -->
+</router-outlet>
+<!-- <h1>this is home</h1> -->
+</div>
